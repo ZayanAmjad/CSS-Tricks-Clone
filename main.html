@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <header>
+        <div class="logoContainer">
+            <image src="Images/asterik.png" id = "asterik" alt="asterik">  
+            <h1>CSS-TRICKS</h1>
+            <img src="Images/digitalocean-svgrepo-com.svg" id = "DOLogo" alt="DigitalOcean logo">
+            <p id = "navText"><span><em>Powered by</em></span><br><span class = "white"><strong>DigitalOcean</strong></span></p>
+        </div>
+
+        <div class="navCatagories">
+            <a href="" class="navLinks">ARTICLES</a>
+            <a href="" class="navLinks">NOTES</a>
+            <a href="" class="navLinks">LINKS</a>
+            <a href="" class="navLinks">GUIDES</a>
+            <a href="" class="navLinks">ALMANAC</a>
+            <a href="" class="navLinks">PICKS</a>
+            <a href="" class="navLinks">SHUFFLE</a>
+        </div>
+
+        <div class="searchIcon">
+            <img src="Images/search-interface-symbol.png" id = "searchIcon" alt="SearchIcon">
+        </div>
+    </header>
+    <main>
+        <div id="article">
+            <div class="img-wrapper">
+                <img src="Images/gap.png" alt="gap">
+                <div class="img-gradient"></div>
+            </div>
+            <div id="articleHalf">
+                <div class="articleLinksContainer">
+                    <a href="" class="articleLinks">Flexbox</a>
+                    <a href="" class="articleLinks">Grid</a>
+                    <a href="" class="articleLinks">Layout</a>
+                    <a href="" class="articleLinks">Multi Column Layout</a>
+                </div>
+                <h2>
+                    The Gap Strikes Back: Now Stylable
+                </h2>
+                <p>
+                    Styling the space between layout items — the gap — has typically required some clever workarounds. But a new CSS feature changes all that with just a few simple CSS properties that make it easy, yet also flexible, to display styled separators between your layout items.
+                </p>
+                <div class="endingLine">
+                    <img src="Images/mr-guy.jpeg" class = "profileImg" alt="img">
+                    <p>
+                        <span class="profileName">Patrick Brosset</span><span class="profileDate">on July 1,2025</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space" style="height: 100vh;"></div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let hasScrolledDown = false;
+
+            $(window).on('scroll', function () {
+                const scrollTop = $(window).scrollTop();
+                const svg = $('#asterik');
+
+                if (scrollTop > 100) {
+                    hasScrolledDown = true;
+                }
+
+                // When scrolling back to top
+                if (scrollTop === 0 && hasScrolledDown) {
+                    svg.addClass('rotate-multiple');
+
+                    // Reset flags and allow it to re-trigger next time
+                    setTimeout(() => {
+                        svg.removeClass('rotate-multiple');
+                        hasScrolledDown = false;
+                    }, 1200); // 1.2s to match animation
+                }
+            });
+        });
+    </script>
+</body>
+</html>

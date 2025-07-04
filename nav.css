@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+header {
+    background-color: #111111;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 20px;
+}
+
+.logoContainer:hover{
+    cursor: pointer;
+}
+
+header h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+    border-right: 1px solid gray;
+}
+
+#asterik {
+    width: 24px;
+    height: 24px;
+    margin-left: 25px;
+    transition: transform 0.5s ease-out;
+}
+
+.rotate-multiple {
+    transform: rotate(360deg);
+}
+
+#DOLogo {
+    width: 25px;
+    height: 25px;
+    margin-left: 4px;
+}
+
+#navText {
+    color: #bdc3c7;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.white{
+    color: white;
+}
+
+.navCatagories {
+    align-items: center;
+    padding: 0 20px;
+    margin: 0;
+    margin-right: 80px;
+}
+
+.navLinks {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 20px 12px;
+    position: relative;
+}
+
+.navLinks:hover {
+    background-color: #292929;
+    color: orange
+}
+
+#searchIcon {
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#searchIcon:hover {
+    background-color: #AEAEAE;
+}
+
+/* Responsive design */

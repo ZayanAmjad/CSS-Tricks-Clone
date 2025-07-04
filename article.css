@@ -1,0 +1,122 @@
+main{
+    box-sizing: border-box;
+    width: 100%;
+    background-image: linear-gradient(to right,#262626, #242424, #262626);
+    padding: 20px 40px;
+}
+
+#article{
+    display: grid;
+    margin-top: 25px;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5.6rem;
+}
+
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.img-gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 107, 53, 0.8) 0%,
+        rgba(220, 38, 127, 0.8) 25%,
+        rgba(147, 51, 234, 0.8) 50%,
+        rgba(59, 130, 246, 0.8) 75%,
+        rgba(16, 185, 129, 0.8) 100%
+    );
+    mix-blend-mode: overlay; /* or try 'multiply', 'soft-light', etc. */
+}
+
+#articleHalf{
+    border-radius: 12px; /* Added border-radius to match the image */
+    background: 
+    repeating-conic-gradient(#FFFFFF 0 25%, #F0F0F0 0 50%) 
+      50% / 60px 60px;
+    padding: 30px 50px 30px 30px;
+}
+
+.articleLinksContainer{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+}
+
+.articleLinks{
+    text-decoration: none;
+    color: orange;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.articleLinks:hover{
+    color:#f7ab70 ;
+}
+
+#articleHalf h2{
+    margin-top: 10px;
+    padding-top: 0;
+    font-size: 40px;
+}
+
+#articleHalf h2:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+#articleHalf p{
+    color: #474747;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.endingLine{
+    gap:10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.endingLine img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+}
+
+.profileName{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+    padding: 0 5px;
+}
+
+.profileDate{
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #article{
+        grid-template-columns: 1fr;
+    }
+}
+
+
