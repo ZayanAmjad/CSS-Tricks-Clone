@@ -1,0 +1,80 @@
+.sliderContainer{
+    display: flex;
+    margin-top: 25px;
+    padding-bottom: 5.6rem;
+    justify-content: left;
+    align-items: stretch;
+}
+
+.left{
+    max-width: 17rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.gradientBorder {
+    background-image: linear-gradient(to bottom right, #ff8a00, #e52e71,rgb(73, 73, 147));
+    border-radius: 16px;
+    padding: 5px;
+    
+}
+
+.content {
+    background: #000000;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    padding: 20px 80px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20rem;
+}
+
+.content h3{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.content p{
+    color: white;
+}
+
+.content a{
+    text-decoration: none;
+}
+
+.content a:hover{
+    color: #0081BC;
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    padding-left: 25px;
+}
+
+.card{
+    width: 15rem;
+    height: 18rem;
+    border-radius: 10px;
+    box-shadow: 
+        0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    background-color: #363636;
+    transition: 0.2s all linear;
+}
+
+.card + .card{
+    margin-left: -10%;
+}
+
+.card:hover{
+    transform: rotate(5deg) translateY(-10px);
+}
+
+.card:hover ~ .card{
+    z-index: 999;
+    translate: 7rem;
+}
