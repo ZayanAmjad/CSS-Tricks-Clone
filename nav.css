@@ -103,4 +103,8 @@ header h1 {
     background-color: #AEAEAE;
 }
 
-/* Responsive design */
+@media only screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+}

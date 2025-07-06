@@ -1,3 +1,4 @@
+/* Updated slider.css with fixes */
 .sliderContainer{
     display: flex;
     margin-top: 25px;
@@ -7,7 +8,7 @@
 }
 
 .left{
-    max-width: 17rem;
+    max-width: 16rem;
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 20rem;
+    height: 20.5rem;
 }
 
 .content h3{
@@ -48,18 +49,35 @@
     color: #0081BC;
 }
 
+.right{
+    max-width: 69vw;
+    margin-left: 1px;
+}
+
 .cardContainer{
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 1rem;
-    padding-left: 25px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    padding: 2rem 0 2rem 20px; /* Added top and bottom padding to accommodate transforms */
+    overflow-x: auto;
+    overflow-y: visible; 
+    scrollbar-color: #919191 #201C29;
+    /* Force scrollbar to always show */
+    -webkit-overflow-scrolling: touch;
+}
+
+.cardContainer::-webkit-scrollbar-thumb:hover {
+    background: #888;
 }
 
 .card{
+    flex: 0 0 auto;
     width: 15rem;
     height: 18rem;
     border-radius: 10px;
+    padding: 15px;
     box-shadow: 
         0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
     background-color: #363636;
@@ -74,7 +92,39 @@
     transform: rotate(5deg) translateY(-10px);
 }
 
+/* Fixed the cascade effect */
 .card:hover ~ .card{
-    z-index: 999;
-    translate: 7rem;
+    transform: translateX(7rem);
+    z-index: 1;
 }
+
+.cardArticle{
+    color: white;
+    font-size: large;
+}
+
+.cardDate{
+    color: gray;
+    font-weight: lighter;
+}
+
+.cardMiddle{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cardMiddle:hover{
+    color: lightgray;
+    cursor: pointer;
+}
+
+.card a{
+    text-decoration: none;
+    color: orange;
+    display: block;
+}
+
+.card a:hover{
+    color: #f7ab70;
+}
+
