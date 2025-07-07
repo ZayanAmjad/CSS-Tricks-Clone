@@ -41,11 +41,11 @@ main{
         rgba(59, 130, 246, 0.8) 75%,
         rgba(16, 185, 129, 0.8) 100%
     );
-    mix-blend-mode: overlay; /* or try 'multiply', 'soft-light', etc. */
+    mix-blend-mode: overlay;
 }
 
 #articleHalf{
-    border-radius: 0 12px 12px 0; /* Added border-radius to match the image */
+    border-radius: 0 12px 12px 0;
     background: 
     repeating-conic-gradient(#FFFFFF 0 25%, #F0F0F0 0 50%) 
       50% / 60px 60px;
