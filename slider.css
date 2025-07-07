@@ -3,10 +3,11 @@
     margin-top: 25px;
     padding-bottom: 5.6rem;
     justify-content: left;
-    align-items: stretch;
+    flex-shrink: 0;
 }
 
 .left{
+    margin-top: 1.6rem;
     max-width: 16rem;
     display: flex;
     flex-direction: column;
@@ -49,22 +50,23 @@
 }
 
 .right{
-    max-width: 69vw;
+    display: flex;
+    justify-content: flex-start;
     margin-left: 1px;
+    flex: 1;
+    overflow-x: hidden;
+    flex-shrink: 0;
 }
 
 .cardContainer{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: nowrap;
     gap: 3rem;
     padding: 2rem 0 2rem 20px; /* Added top and bottom padding to accommodate transforms */
     overflow-x: auto;
-    overflow-y: visible; 
-    scrollbar-color: #919191 #201C29;
-    /* Force scrollbar to always show */
-    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    
 }
 
 .cardContainer::-webkit-scrollbar-thumb:hover {
@@ -72,15 +74,14 @@
 }
 
 .card{
-    flex: 0 0 auto;
     width: 15rem;
     height: 18rem;
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 
-        0rem 0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    background-color: #363636;
+    padding: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.85);
+    background: linear-gradient(to right, #414141, #1D1D1D);
     transition: 0.2s all linear;
+    flex-shrink: 0;
 }
 
 .card + .card{
@@ -91,9 +92,8 @@
     transform: rotate(5deg) translateY(-10px);
 }
 
-/* Fixed the cascade effect */
 .card:hover ~ .card{
-    transform: translateX(7rem);
+    transform: translateX(6rem);
     z-index: 1;
 }
 
@@ -110,6 +110,10 @@
 .cardMiddle{
     font-size: 1.5rem;
     color: white;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
 }
 
 .cardMiddle:hover{
@@ -127,9 +131,18 @@
     color: #f7ab70;
 }
 
+.straightLine{
+    height: 22rem;
+    width: 0.3rem;
+    background: linear-gradient(to bottom, #ff8a00, #e52e71,rgb(73, 73, 147));
+}
+
 @media only screen and (max-width: 768px) {
-    .right{
-        max-width: 69vw;
-        margin-left: 1px;
+    .straightLine{
+        display: none;
+    }
+
+    .left{
+        width: 10rem;
     }
 }

@@ -1,13 +1,10 @@
 body {
     margin: 0;
-    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 header {
     background-color: #111111;
-    padding: 0;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -20,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding-left: 20px;
+    padding-left: 1rem;
 }
 
 .logoContainer:hover{
@@ -31,16 +28,16 @@ header h1 {
     color: white;
     font-size: 30px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 0.5rem 0;
     letter-spacing: 0.5px;
-    padding-right: 8px;
+    padding-right: 0.3rem;
     border-right: 1px solid gray;
 }
 
 #asterik {
     width: 24px;
     height: 24px;
-    margin-left: 25px;
+    margin-left: 1rem;
 }
 
 .rotate-multiple {
@@ -61,8 +58,6 @@ header h1 {
 #navText {
     color: #bdc3c7;
     font-size: 11px;
-    margin: 0;
-    padding: 0;
     margin-left: 5px;
 }
 
@@ -72,8 +67,7 @@ header h1 {
 
 .navCatagories {
     align-items: center;
-    padding: 0 20px;
-    margin: 0;
+    padding: 0 1rem;
     margin-right: 80px;
 }
 
@@ -81,9 +75,8 @@ header h1 {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
-    padding: 20px 12px;
-    position: relative;
+    font-size: 1rem;
+    padding: 1rem 1rem;
 }
 
 .navLinks:hover {
@@ -92,9 +85,6 @@ header h1 {
 }
 
 #searchIcon {
-    position: fixed;
-    top: 10px;
-    right: 40px;
     width: 15px;
     height: 15px;
     background-color: white;
@@ -106,4 +96,11 @@ header h1 {
 
 #searchIcon:hover {
     background-color: #AEAEAE;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navCatagories{
+        order: 3;
+    }
 }

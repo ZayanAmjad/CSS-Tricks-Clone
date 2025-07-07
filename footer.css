@@ -1,6 +1,4 @@
 footer {
-    box-sizing: border-box;
-    width: 100%;
     background-image: linear-gradient(to right,#262626, #242424, #262626);
 }
 
@@ -12,23 +10,27 @@ footer {
 }
 
 .mainFooter{
-    max-width: 93.7%;
     background-color: black;
     padding: 40px 40px;
     margin-top: -4%;
     position: relative;
     z-index: 1;
-    height: 50vh;
+}
+
+.upper{
+    display: flex;
+    gap:3rem;
+    justify-content: flex-start;
 }
 
 .letter{
-    position: absolute;
-    left: 35rem;
-    top: -3rem;
     background-color: #434343;
     padding: 10px;
     width: 35rem;
     border-radius: 0 0 12px 12px;
+    position: relative;
+    margin-top: -5.5rem;
+    margin-left: 13rem;
 }
 
 .letter::before {
@@ -114,3 +116,45 @@ footer {
     color: white;
 }
 
+@media only screen and (max-width: 768px) {
+    .letter{
+        margin-left: 0;
+    }
+
+    .footerGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .footerGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .upper{
+        flex-direction: column;
+        
+    }
+
+    .letter{
+        background-color: #434343;
+        padding: 10px;
+        width: auto;
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        margin-top: -5.5rem;
+        margin-left: 0rem;
+        order: 1;
+    }
+
+    .inputText{
+        padding: 0.3rem;
+        width: 5.5rem;
+    }
+
+    .poweredBy{
+        order: 2;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
