@@ -132,7 +132,8 @@
 }
 
 .straightLine{
-    height: 22rem;
+    margin-top: 2rem;
+    height: 21rem;
     width: 0.3rem;
     background: linear-gradient(to bottom, #ff8a00, #e52e71,rgb(73, 73, 147));
 }
