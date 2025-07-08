@@ -4,20 +4,22 @@ body {
 }
 
 header {
+    position: relative;
+    padding: 0 2rem;
     background-color: #111111;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: left;
-    flex-wrap: wrap;
     height: auto;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .logoContainer {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding-left: 1rem;
 }
 
 .logoContainer:hover{
@@ -26,18 +28,17 @@ header {
 
 header h1 {
     color: white;
-    font-size: 30px;
+    align-items: center;
+    font-size: 25px;
     font-weight: bold;
-    margin: 0.5rem 0;
     letter-spacing: 0.5px;
-    padding-right: 0.3rem;
     border-right: 1px solid gray;
+    margin: 0;
 }
 
 #asterik {
     width: 24px;
     height: 24px;
-    margin-left: 1rem;
 }
 
 .rotate-multiple {
@@ -52,13 +53,12 @@ header h1 {
 #DOLogo {
     width: 25px;
     height: 25px;
-    margin-left: 4px;
+    padding: 0 0.3rem;
 }
 
 #navText {
     color: #bdc3c7;
     font-size: 11px;
-    margin-left: 5px;
 }
 
 .white{
@@ -66,17 +66,22 @@ header h1 {
 }
 
 .navCatagories {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 1rem;
-    margin-right: 80px;
+    gap:2rem;
+    margin-left: 3rem;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .navLinks {
+    box-sizing: border-box;
+    padding: 1rem 0;
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 1rem;
-    padding: 1rem 1rem;
 }
 
 .navLinks:hover {
@@ -85,6 +90,9 @@ header h1 {
 }
 
 #searchIcon {
+    position: absolute;
+    top:2%;
+    right: 3%;
     width: 15px;
     height: 15px;
     background-color: white;
@@ -98,9 +106,14 @@ header h1 {
     background-color: #AEAEAE;
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (max-width: 983px) {
     .navCatagories{
-        order: 3;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header h1{
+        font-size: 1rem;
     }
 }
